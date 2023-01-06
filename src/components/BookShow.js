@@ -14,10 +14,15 @@ const handleDeleteClick = () => {
     onDelete(book.id);
 }
 
-let content = <h3>{book.title}</h3>
+const handleSubmit = (id, newTitle) => {
+    setShowEdit(false);
+    onEdit(id, newTitle);
+    console.log(newTitle);
+}
+let content = <h3>{book.title}</h3>;
 
 if(showEdit) {
-    content = <BookEdit onEdit={onEdit} book={book} />
+    content = <BookEdit  book={book} onSubmit={handleSubmit} />
 }
 
     return <div className="book-show">
