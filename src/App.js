@@ -9,8 +9,6 @@ function App() {
 //when app is first rendered and not called again []
     useEffect(() => {
     
-        
-
         fetchBooks();
     }, []);
 
@@ -22,7 +20,7 @@ function App() {
         <BookList />
         <BookCreate />
         </div>
-    )
-    };
+    );
+    }
 
     export default App;
